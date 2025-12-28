@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tracking | InspireBots</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <img src="logo.png">
+  <a href="index.html">Home</a>
+  <a href="products.html">Products</a>
+  <a href="tracking.html">Tracking</a>
+  <a href="login.html" class="right">Login</a>
+</nav>
+
+<div class="container">
+  <h2>Track Your Order</h2>
+  <input id="trackPhone" placeholder="Enter phone number"><br>
+  <button onclick="track()">Check Status</button>
+  <p id="result"></p>
+</div>
+
+<script>
+function track() {
+  const phone = document.getElementById("trackPhone").value;
+
+  fetch("PASTE_WEB_APP_URL?phone=" + phone)
+    .then(r => r.json())
+    .then(d => {
+      document.getElementById("result").innerText =
+        d.status === "Not Found"
+        ? "No order found"
+        : `Order ${d.orderId}: ${d.status}`;
+    });
+}
+</script>
+
+</body>
+</html>
