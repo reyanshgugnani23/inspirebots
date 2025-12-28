@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Products | InspireBots</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <img src="logo.png">
+  <a href="index.html">Home</a>
+  <a href="products.html">Products</a>
+  <a href="tracking.html">Tracking</a>
+  <a href="login.html" class="right">Login</a>
+</nav>
+
+<div class="container">
+  <h2>Products</h2>
+
+  <input id="name" placeholder="Your Name"><br>
+  <input id="phone" placeholder="Phone Number"><br><br>
+
+  <div class="products">
+    <div class="product">
+      <h3>ESP32 Dev Board</h3>
+      <p>₹450</p>
+      <button onclick="addToCart('ESP32 Dev Board',450)">Add</button>
+    </div>
+
+    <div class="product">
+      <h3>BTS7960 Motor Driver</h3>
+      <p>₹650</p>
+      <button onclick="addToCart('BTS7960 Motor Driver',650)">Add</button>
+    </div>
+  </div>
+
+  <h3>Cart</h3>
+  <ul id="cart"></ul>
+  <button onclick="placeOrder()">Place Order</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
