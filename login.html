@@ -20,7 +20,14 @@
   <input id="key" type="password" placeholder="Admin Key"><br>
   <button onclick="login()">Login</button>
 </div>
+<h2>Customer Login</h2>
 
+<input id="email" placeholder="Email"><br>
+<input id="password" type="password" placeholder="Password"><br>
+
+<button onclick="login()">Login</button>
+
+<script type="module" src="login.js"></script>
 <script>
 function login() {
   if (document.getElementById("key").value === "INSPIREBOTS123") {
@@ -30,14 +37,7 @@ function login() {
   }
 }
 </script>
- <h2>Customer Login</h2>
-
-<input id="email" placeholder="Email"><br>
-<input id="password" type="password" placeholder="Password"><br>
-
-<button onclick="login()">Login</button>
-
-<script type="module" src="login.js"></script>
+ 
 
 </body>
 </html>
